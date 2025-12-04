@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guard Finance | Secure Credit & Insurance Solutions</title>
+    <title>AW Finance | Banking Correspondent Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     
     <style>
         /* =========================================
            1. CSS VARIABLES & RESET
            ========================================= */
         :root {
-            /* Palette: Security & Trust */
-            --primary-blue: #003366; /* Deep Shield Blue */
-            --secondary-slate: #708090; /* Reliable Slate */
-            --accent-silver: #C0C0C0; /* Metallic Silver */
-            --bg-light: #F8F9FA;
+            /* Palette: Institutional & Secure */
+            --primary-navy: #002B5C; /* Classic Bank Blue */
+            --secondary-blue: #005696; /* Lighter Trust Blue */
+            --accent-gold: #C0A062; /* Subtle Prestige Gold */
+            --bg-light: #F3F4F6;
             --bg-white: #FFFFFF;
-            --text-dark: #1A1A1A;
-            --text-muted: #555555;
+            --text-dark: #111827;
+            --text-muted: #4B5563;
             
             --font-head: 'Playfair Display', serif;
-            --font-body: 'Mulish', sans-serif;
+            --font-body: 'Libre Franklin', sans-serif;
             
             --container-width: 1200px;
-            --section-padding: 90px 0;
+            --section-padding: 100px 0;
             --transition: all 0.3s ease;
         }
 
@@ -51,9 +51,9 @@
         h1, h2, h3, h4 {
             font-family: var(--font-head);
             font-weight: 600;
-            color: var(--primary-blue);
+            color: var(--primary-navy);
             margin-bottom: 20px;
-            line-height: 1.3;
+            line-height: 1.2;
         }
 
         p {
@@ -92,7 +92,7 @@
 
         .section-subtitle {
             display: block;
-            color: var(--secondary-slate);
+            color: var(--secondary-blue);
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 0.85rem;
@@ -106,21 +106,21 @@
 
         .btn {
             display: inline-block;
-            padding: 15px 40px;
-            background-color: var(--primary-blue);
+            padding: 15px 35px;
+            background-color: var(--primary-navy);
             color: var(--bg-white);
-            font-weight: 700;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
             border-radius: 4px;
-            border: 2px solid var(--primary-blue);
+            border: 2px solid var(--primary-navy);
             cursor: pointer;
         }
 
         .btn:hover {
             background-color: transparent;
-            color: var(--primary-blue);
+            color: var(--primary-navy);
         }
 
         .btn-outline {
@@ -131,7 +131,7 @@
 
         .btn-outline:hover {
             background-color: var(--bg-white);
-            color: var(--primary-blue);
+            color: var(--primary-navy);
         }
 
         /* =========================================
@@ -143,8 +143,8 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .nav-wrapper {
@@ -156,13 +156,13 @@
         .logo {
             font-family: var(--font-head);
             font-size: 1.8rem;
-            color: var(--primary-blue);
+            color: var(--primary-navy);
             font-weight: 700;
             letter-spacing: 1px;
         }
 
         .logo span {
-            color: var(--secondary-slate);
+            color: var(--accent-gold);
         }
 
         nav ul {
@@ -174,12 +174,12 @@
         nav a {
             color: var(--text-dark);
             font-size: 0.9rem;
-            font-weight: 600;
             text-transform: uppercase;
+            font-weight: 600;
         }
 
         nav a:hover {
-            color: var(--primary-blue);
+            color: var(--secondary-blue);
         }
 
         /* =========================================
@@ -187,7 +187,7 @@
            ========================================= */
         .hero {
             height: 90vh;
-            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background: linear-gradient(rgba(0, 43, 92, 0.9), rgba(0, 43, 92, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -207,7 +207,7 @@
         }
 
         .hero p {
-            color: #E6E6E6;
+            color: #E5E7EB;
             font-size: 1.2rem;
             margin-bottom: 40px;
             max-width: 700px;
@@ -226,7 +226,7 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 70px;
             align-items: center;
         }
 
@@ -241,7 +241,7 @@
         .about-image img {
             border-radius: 4px;
             box-shadow: 20px 20px 0 var(--bg-light);
-            border-left: 5px solid var(--primary-blue);
+            border-bottom: 5px solid var(--primary-navy);
         }
 
         /* =========================================
@@ -264,23 +264,23 @@
             border-radius: 4px;
             transition: var(--transition);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: left;
-            border-bottom: 3px solid transparent;
+            text-align: center;
+            border-top: 4px solid transparent;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            border-bottom: 3px solid var(--primary-blue);
+            border-top: 4px solid var(--accent-gold);
         }
 
         .service-icon {
             font-size: 2.5rem;
-            color: var(--primary-blue);
+            color: var(--primary-navy);
             margin-bottom: 20px;
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
         }
 
@@ -289,12 +289,12 @@
            ========================================= */
         .advantages {
             padding: var(--section-padding);
-            background-color: var(--primary-blue);
+            background-color: var(--primary-navy);
             color: var(--bg-white);
         }
 
         .advantages .section-subtitle {
-            color: var(--accent-silver);
+            color: var(--accent-gold);
         }
 
         .advantages h2 {
@@ -302,7 +302,7 @@
         }
 
         .advantages p {
-            color: #D3D3D3;
+            color: #D1D5DB;
         }
 
         .adv-grid {
@@ -355,7 +355,7 @@
             width: 60px;
             height: 60px;
             background-color: var(--bg-light);
-            color: var(--primary-blue);
+            color: var(--primary-navy);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -363,7 +363,7 @@
             font-weight: 700;
             font-size: 1.2rem;
             margin: 0 auto 20px auto;
-            border: 2px solid var(--primary-blue);
+            border: 2px solid var(--accent-gold);
         }
 
         .step-content {
@@ -386,7 +386,7 @@
             background: var(--bg-white);
             padding: 60px;
             border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
 
         .contact-info {
@@ -399,7 +399,7 @@
         }
 
         .info-item h5 {
-            color: var(--secondary-slate);
+            color: var(--secondary-blue);
             font-family: var(--font-body);
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -408,7 +408,7 @@
         }
 
         .info-item p {
-            color: var(--primary-blue);
+            color: var(--primary-navy);
             font-weight: 600;
             font-size: 1.1rem;
             margin: 0;
@@ -423,8 +423,8 @@
         input, textarea, select {
             width: 100%;
             padding: 15px;
-            border: 1px solid #DDD;
-            background: #FAFAFA;
+            border: 1px solid #D1D5DB;
+            background: #F9FAFB;
             font-family: var(--font-body);
             font-size: 1rem;
             outline: none;
@@ -432,7 +432,7 @@
         }
 
         input:focus, textarea:focus {
-            border-color: var(--primary-blue);
+            border-color: var(--primary-navy);
             background: #fff;
         }
 
@@ -445,7 +445,7 @@
            10. FOOTER
            ========================================= */
         footer {
-            background-color: var(--primary-blue);
+            background-color: var(--primary-navy);
             color: rgba(255,255,255,0.7);
             padding: 60px 0;
             text-align: center;
@@ -472,13 +472,13 @@
 
     <header>
         <div class="container nav-wrapper">
-            <div class="logo">GUARD <span>FINANCE</span></div>
+            <div class="logo">AW <span>FINANCE</span></div>
             <nav>
                 <ul>
-                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#about">Company</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#advantages">Safety</a></li>
-                    <li><a href="#process">Process</a></li>
+                    <li><a href="#advantages">Trust</a></li>
+                    <li><a href="#process">Steps</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -487,23 +487,23 @@
 
     <section class="hero">
         <div class="container hero-content">
-            <h1>Guarding Your Capital,<br>Enabling Your Future</h1>
-            <p>Guard Finance delivers robust credit intermediation and insurance solutions. We are your fortress for financial stability in Fortaleza.</p>
-            <a href="#contact" class="btn btn-outline">Secure Your Finance</a>
+            <h1>Connecting You to Capital <br> in Rio de Janeiro</h1>
+            <p>AW Finance serves as your trusted banking correspondent and credit intermediary. We bridge the gap between your financial goals and the institutions that fund them.</p>
+            <a href="#contact" class="btn btn-outline">Start Your Application</a>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container about-grid">
             <div class="about-text">
-                <span class="section-subtitle">Who We Are</span>
-                <h2 class="section-title">Protectors of Prosperity</h2>
-                <p>GUARD FINANCE LTDA is a dedicated financial intermediary based in Fortaleza, Ceara. Led by Jessica Franca De Queiroz, we operate with a singular mission: to safeguard and grow the assets of our clients through strategic credit and insurance solutions.</p>
-                <p>We specialize in "Activities Related to Credit Intermediation," bridging the gap between individuals, businesses, and major banking institutions. However, we go further by integrating "Insurance Related Activities," ensuring that every loan or investment is backed by a safety net.</p>
-                <p>Whether you need access to capital for expansion or protection against unforeseen risks, Guard Finance stands as a vigilant partner, ensuring your financial foundation remains unshakable.</p>
+                <span class="section-subtitle">Our Profile</span>
+                <h2 class="section-title">Institutional Reliability</h2>
+                <p>AW FINANCE CORRESPONDENTE BANCARIO LTDA is a specialized financial intermediary located in Rio de Janeiro. Led by Augusto Parente Goncalves Magalhaes, we operate as a dedicated "Banking Correspondent," facilitating essential financial services on behalf of major banks.</p>
+                <p>We understand that navigating the credit landscape can be daunting. Our role is to simplify the process. We leverage our institutional partnerships to provide you with direct access to credit lines, deposit banking functions, and tailored financial products.</p>
+                <p>Whether you are seeking personal credit or business financing, AW Finance offers the security of a bank with the personalized attention of a dedicated consultant.</p>
             </div>
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1565514020176-dbf2238cdb66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Financial Security">
+                <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Banking Consultation">
             </div>
         </div>
     </section>
@@ -511,24 +511,24 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">What We Offer</span>
-                <h2 class="section-title">Defensive Financial Strategies</h2>
+                <span class="section-subtitle">Our Solutions</span>
+                <h2 class="section-title">Intermediation Services</h2>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">&#128179;</div> <h3>Credit Intermediation</h3>
-                    <p>We facilitate secure loans and financing options. Our team negotiates favorable terms with banks, ensuring you get the capital you need without compromising your long-term stability.</p>
+                    <div class="service-icon">&#127974;</div> <h3>Banking Correspondence</h3>
+                    <p>As authorized correspondents, we handle account openings, payments, and document processing for partner banks, bringing the bank closer to you.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">&#128737;</div> <h3>Insurance Solutions</h3>
-                    <p>Risk is inevitable; loss is not. We offer comprehensive insurance brokerage services to protect your assets, liabilities, and business continuity against market fluctuations.</p>
+                    <div class="service-icon">&#128179;</div> <h3>Credit Intermediation</h3>
+                    <p>We analyze your credit profile and match you with the best loan products available. We negotiate rates and terms to ensure affordable and sustainable financing.</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">&#128188;</div> <h3>Investment Pools</h3>
-                    <p>We advise on "Other Financial Investment Activities," helping clients participate in secure investment pools and funds that offer steady returns with managed risk profiles.</p>
+                    <div class="service-icon">&#128200;</div> <h3>Financial Advisory</h3>
+                    <p>Our team provides guidance on "Other Financial Investment Activities," helping you structure your finances to meet long-term objectives and compliance requirements.</p>
                 </div>
             </div>
         </div>
@@ -537,22 +537,22 @@
     <section id="advantages" class="advantages">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">Why Guard Finance</span>
-                <h2 class="section-title">The Shield of Trust</h2>
+                <span class="section-subtitle">Why AW Finance</span>
+                <h2 class="section-title">The Correspondent Advantage</h2>
             </div>
 
             <div class="adv-grid">
                 <div class="adv-item">
-                    <h4>Local Fortification</h4>
-                    <p>Based in Fortaleza, we understand the regional economic landscape. We provide solutions that are resilient to local market shifts and regulatory changes.</p>
+                    <h4>Direct Access</h4>
+                    <p>We cut through the red tape. Our status as a banking correspondent gives us direct lines to decision-makers at financial institutions, speeding up approvals.</p>
                 </div>
                 <div class="adv-item">
-                    <h4>Holistic Protection</h4>
-                    <p>We don't just lend; we protect. By combining credit access with insurance strategies, we ensure you don't overleverage without a safety plan.</p>
+                    <h4>Rio Expertise</h4>
+                    <p>Based in Rio de Janeiro, we understand the local market dynamics and regulatory environment, ensuring your financial dealings are compliant and optimized.</p>
                 </div>
                 <div class="adv-item">
-                    <h4>Principal Leadership</h4>
-                    <p>Jessica Franca De Queiroz leads with a philosophy of prudence and transparency. We prioritize your financial safety over short-term gains.</p>
+                    <h4>Principal Trust</h4>
+                    <p>Augusto Parente Goncalves Magalhaes ensures that every client interaction is conducted with the highest level of integrity and transparency.</p>
                 </div>
             </div>
         </div>
@@ -562,31 +562,31 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">How We Work</span>
-                <h2 class="section-title">The Security Protocol</h2>
+                <h2 class="section-title">Streamlined Access</h2>
             </div>
 
             <div class="process-steps">
                 <div class="step">
                     <div class="step-num">1</div>
                     <div class="step-content">
-                        <h3>Assessment</h3>
-                        <p>We conduct a thorough risk and credit assessment to understand your financial standing and vulnerabilities.</p>
+                        <h3>Consultation</h3>
+                        <p>We review your financial needs and documentation to determine eligibility for specific banking products.</p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-num">2</div>
                     <div class="step-content">
-                        <h3>Structuring</h3>
-                        <p>We design a financial package that balances liquidity needs (credit) with risk mitigation (insurance).</p>
+                        <h3>Application</h3>
+                        <p>We handle the submission process, ensuring all forms are correct and optimizing your profile for approval.</p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-num">3</div>
                     <div class="step-content">
-                        <h3>Deployment</h3>
-                        <p>We execute the agreements with financial institutions and activate your coverage, securing your path forward.</p>
+                        <h3>Approval</h3>
+                        <p>Once approved by the partner bank, we facilitate the final signing and disbursement of funds.</p>
                     </div>
                 </div>
             </div>
@@ -597,24 +597,24 @@
         <div class="container">
             <div class="text-center">
                 <span class="section-subtitle">Get In Touch</span>
-                <h2 class="section-title">Strengthen Your Position</h2>
+                <h2 class="section-title">Access Financial Opportunity</h2>
             </div>
 
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="info-item">
                         <h5>Headquarters</h5>
-                        <p>FORTALEZA, CEARA<br>Brazil</p>
+                        <p>RIO DE JANEIRO, RJ<br>Brazil</p>
                     </div>
                     
                     <div class="info-item">
                         <h5>Electronic Mail</h5>
-                        <p>info@guardfinance.info</p>
+                        <p>info@awfinancecorrespondentebancario.info</p>
                     </div>
 
                     <div class="info-item">
                         <h5>Key Principal</h5>
-                        <p>Jessica Franca De Queiroz</p>
+                        <p>Augusto Parente Goncalves Magalhaes</p>
                     </div>
                 </div>
 
@@ -624,12 +624,12 @@
                         <input type="email" placeholder="Email Address" required>
                         <select>
                             <option value="" disabled selected>Service Needed</option>
-                            <option value="Credit">Credit Access</option>
-                            <option value="Insurance">Insurance Protection</option>
-                            <option value="Investment">Investment Advisory</option>
+                            <option value="Credit">Credit/Loans</option>
+                            <option value="Correspondent">Banking Services</option>
+                            <option value="Advisory">Financial Advice</option>
                         </select>
-                        <textarea placeholder="Tell us about your financial needs..."></textarea>
-                        <button type="submit" class="btn">Secure Now</button>
+                        <textarea placeholder="How can we help you?"></textarea>
+                        <button type="submit" class="btn">Submit Request</button>
                     </form>
                 </div>
             </div>
@@ -638,8 +638,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 GUARD FINANCE LTDA. All Rights Reserved.</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; color: rgba(255,255,255,0.6);">Activities Related to Credit Intermediation | Insurance Agencies</p>
+            <p>&copy; 2024 AW FINANCE CORRESPONDENTE BANCARIO LTDA. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: rgba(255,255,255,0.6);">Activities Related to Credit Intermediation | Finance and Insurance</p>
         </div>
     </footer>
 
