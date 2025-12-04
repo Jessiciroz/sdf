@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guard Finance | Secure Credit & Insurance Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           1. CSS VARIABLES & RESET
+           ========================================= */
+        :root {
+            /* Palette: Security & Trust */
+            --primary-blue: #003366; /* Deep Shield Blue */
+            --secondary-slate: #708090; /* Reliable Slate */
+            --accent-silver: #C0C0C0; /* Metallic Silver */
+            --bg-light: #F8F9FA;
+            --bg-white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --text-muted: #555555;
+            
+            --font-head: 'Playfair Display', serif;
+            --font-body: 'Mulish', sans-serif;
+            
+            --container-width: 1200px;
+            --section-padding: 90px 0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-head);
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* =========================================
+           2. UTILITIES
+           ========================================= */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        .text-center { text-align: center; }
+
+        .section-header {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            display: block;
+            color: var(--secondary-slate);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary-blue);
+            color: var(--bg-white);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            border-radius: 4px;
+            border: 2px solid var(--primary-blue);
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--primary-blue);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--bg-white);
+            color: var(--bg-white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--bg-white);
+            color: var(--primary-blue);
+        }
+
+        /* =========================================
+           3. HEADER
+           ========================================= */
+        header {
+            background-color: var(--bg-white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-slate);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* =========================================
+           4. HERO SECTION
+           ========================================= */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.7)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--bg-white);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            color: var(--bg-white);
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            color: #E6E6E6;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =========================================
+           5. ABOUT US
+           ========================================= */
+        .about {
+            padding: var(--section-padding);
+            background-color: var(--bg-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            border-radius: 4px;
+            box-shadow: 20px 20px 0 var(--bg-light);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        /* =========================================
+           6. SERVICES
+           ========================================= */
+        .services {
+            padding: var(--section-padding);
+            background-color: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 4px;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: left;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        /* =========================================
+           7. ADVANTAGES
+           ========================================= */
+        .advantages {
+            padding: var(--section-padding);
+            background-color: var(--primary-blue);
+            color: var(--bg-white);
+        }
+
+        .advantages .section-subtitle {
+            color: var(--accent-silver);
+        }
+
+        .advantages h2 {
+            color: var(--bg-white);
+        }
+
+        .advantages p {
+            color: #D3D3D3;
+        }
+
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .adv-item {
+            text-align: left;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .adv-item h4 {
+            color: var(--bg-white);
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* =========================================
+           8. PROCESS
+           ========================================= */
+        .process {
+            padding: var(--section-padding);
+            background-color: var(--bg-white);
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .step-num {
+            width: 60px;
+            height: 60px;
+            background-color: var(--bg-light);
+            color: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0 auto 20px auto;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .step-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* =========================================
+           9. CONTACT
+           ========================================= */
+        .contact {
+            padding: var(--section-padding);
+            background-color: var(--bg-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            background: var(--bg-white);
+            padding: 60px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .contact-info {
+            padding-right: 40px;
+            border-right: 1px solid #eee;
+        }
+
+        .info-item {
+            margin-bottom: 30px;
+        }
+
+        .info-item h5 {
+            color: var(--secondary-slate);
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .info-item p {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #DDD;
+            background: #FAFAFA;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        input:focus, textarea:focus {
+            border-color: var(--primary-blue);
+            background: #fff;
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* =========================================
+           10. FOOTER
+           ========================================= */
+        footer {
+            background-color: var(--primary-blue);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* =========================================
+           RESPONSIVE
+           ========================================= */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.8rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .adv-grid, .process-steps { flex-direction: column; }
+            .contact-info { border-right: none; border-bottom: 1px solid #eee; padding-right: 0; padding-bottom: 40px; margin-bottom: 40px; }
+            .nav-wrapper { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">GUARD <span>FINANCE</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#advantages">Safety</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Guarding Your Capital,<br>Enabling Your Future</h1>
+            <p>Guard Finance delivers robust credit intermediation and insurance solutions. We are your fortress for financial stability in Fortaleza.</p>
+            <a href="#contact" class="btn btn-outline">Secure Your Finance</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-text">
+                <span class="section-subtitle">Who We Are</span>
+                <h2 class="section-title">Protectors of Prosperity</h2>
+                <p>GUARD FINANCE LTDA is a dedicated financial intermediary based in Fortaleza, Ceara. Led by Jessica Franca De Queiroz, we operate with a singular mission: to safeguard and grow the assets of our clients through strategic credit and insurance solutions.</p>
+                <p>We specialize in "Activities Related to Credit Intermediation," bridging the gap between individuals, businesses, and major banking institutions. However, we go further by integrating "Insurance Related Activities," ensuring that every loan or investment is backed by a safety net.</p>
+                <p>Whether you need access to capital for expansion or protection against unforeseen risks, Guard Finance stands as a vigilant partner, ensuring your financial foundation remains unshakable.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1565514020176-dbf2238cdb66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Financial Security">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Defensive Financial Strategies</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">&#128179;</div> <h3>Credit Intermediation</h3>
+                    <p>We facilitate secure loans and financing options. Our team negotiates favorable terms with banks, ensuring you get the capital you need without compromising your long-term stability.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">&#128737;</div> <h3>Insurance Solutions</h3>
+                    <p>Risk is inevitable; loss is not. We offer comprehensive insurance brokerage services to protect your assets, liabilities, and business continuity against market fluctuations.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon" style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px;">&#128188;</div> <h3>Investment Pools</h3>
+                    <p>We advise on "Other Financial Investment Activities," helping clients participate in secure investment pools and funds that offer steady returns with managed risk profiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Why Guard Finance</span>
+                <h2 class="section-title">The Shield of Trust</h2>
+            </div>
+
+            <div class="adv-grid">
+                <div class="adv-item">
+                    <h4>Local Fortification</h4>
+                    <p>Based in Fortaleza, we understand the regional economic landscape. We provide solutions that are resilient to local market shifts and regulatory changes.</p>
+                </div>
+                <div class="adv-item">
+                    <h4>Holistic Protection</h4>
+                    <p>We don't just lend; we protect. By combining credit access with insurance strategies, we ensure you don't overleverage without a safety plan.</p>
+                </div>
+                <div class="adv-item">
+                    <h4>Principal Leadership</h4>
+                    <p>Jessica Franca De Queiroz leads with a philosophy of prudence and transparency. We prioritize your financial safety over short-term gains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">How We Work</span>
+                <h2 class="section-title">The Security Protocol</h2>
+            </div>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
+                        <h3>Assessment</h3>
+                        <p>We conduct a thorough risk and credit assessment to understand your financial standing and vulnerabilities.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
+                        <h3>Structuring</h3>
+                        <p>We design a financial package that balances liquidity needs (credit) with risk mitigation (insurance).</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
+                        <h3>Deployment</h3>
+                        <p>We execute the agreements with financial institutions and activate your coverage, securing your path forward.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Strengthen Your Position</h2>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h5>Headquarters</h5>
+                        <p>FORTALEZA, CEARA<br>Brazil</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h5>Electronic Mail</h5>
+                        <p>info@guardfinance.info</p>
+                    </div>
+
+                    <div class="info-item">
+                        <h5>Key Principal</h5>
+                        <p>Jessica Franca De Queiroz</p>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <select>
+                            <option value="" disabled selected>Service Needed</option>
+                            <option value="Credit">Credit Access</option>
+                            <option value="Insurance">Insurance Protection</option>
+                            <option value="Investment">Investment Advisory</option>
+                        </select>
+                        <textarea placeholder="Tell us about your financial needs..."></textarea>
+                        <button type="submit" class="btn">Secure Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 GUARD FINANCE LTDA. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: rgba(255,255,255,0.6);">Activities Related to Credit Intermediation | Insurance Agencies</p>
+        </div>
+    </footer>
+
+</body>
+</html>
